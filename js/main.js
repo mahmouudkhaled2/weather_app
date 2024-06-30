@@ -23,7 +23,7 @@ const nextMinTemp = document.querySelectorAll('.next-min-temp');
 
 
 async function getWeatherData(city) {
-    let myRespose = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=9c172aa3b27242f599e140629242806&q=${city}&days=3`)
+    let myRespose = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=9c172aa3b27242f599e140629242806&q=${city}&days=3`)
     let weatherData = await myRespose.json();
     return weatherData;
 } 
@@ -75,4 +75,5 @@ launchApp()
 searchInput.addEventListener('input', function () {
         launchApp(searchInput.value)
 })
+
 
