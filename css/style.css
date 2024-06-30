@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+:root {
+    --main-color: #009ad8;
+    --sub-color: #bfc1c8;
+    --bg-dark: #262936;
+    --bg-light: #323544;
+    --main-font: "Roboto", sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: var(--main-font);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-custom-dark {
+    background-color: var(--bg-dark) !important;
+}
+
+.bg-custom-less-dark {
+    background-color: var(--bg-light) !important;
+}
+
+.main-color {
+    color: var(--main-color) !important;
+}
+
+.sub-color {
+    color: var(--sub-color) !important;
+}
+
+
+/****************************************/
+/* START NAVBAR */
+.navbar-brand img {
+    width: 65px;
+}
+
+.navbar-brand>div {
+    line-height: 1;
+}
+.navbar-brand small {
+    font-size: 10px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    transition: all 0.2s linear !important;
+}
+
+
+.navbar .nav-link:hover ,
+.navbar .active  {
+    box-shadow: #009ad8 0 0 0 2px;
+    color: #009ad8 !important;
+}
+.main-section {
+    background-color: #1e202b;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.search-box .search-bar , 
+.subscribe-bar {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 16px;
+    background-color: #1e202b;
+    color: #fff;
+    border-radius: 62px;
+}
+
+.search-box .search-btn, 
+.subscribe .subscribe-btn {
+    padding: 10px 37px;
+    right: 5px;
+}
+
+.forecast-container .forecast {
+    width: 33.3333%;
+    @media (width <= 991px) {
+        width: 100%;
+    }
+}
+
+.today-forecast .today-temp{
+    font-size: 80px;
+}
+
+.today-forecast .forecast-header, 
+.third-forecast .forecast-header {
+    background-color: #2d303d !important;
+}
+
+.second-forecast .forecast-header {
+    background-color: #222530 !important;
+}
+
+.rain-icon, .wind-icon, .compass-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.rain-icon {
+    background-image: url(../images/icon-umberella@2x.png);
+}
+
+.wind-icon {
+    background-image: url(../images/icon-wind@2x.png);
+}
+
+.compass-icon {
+    background-image: url(../images/icon-compass@2x.png);
+}
+
+
+
+footer .subscribe {
+    width: 65%;
+
+    @media (width <= 991px) {
+        width: 100%;
+    }
+}
+
+footer .social-media {
+    width: 35%;
+    
+    @media (width <= 991px) {
+        width: 100%;
+    }
+}
+
+footer .social-media  a {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    transition: all 0.4s;
+}
+
+footer .social-media  a:hover {
+    background-color: #009ad8 !important;
+    color: #fff !important;
+}
+
+
+.copyright {
+    font-size: 14px;
+}

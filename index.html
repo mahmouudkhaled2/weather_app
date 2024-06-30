@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="./images/favIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-dark py-5">
+        <div class="container">
+          <a class="navbar-brand text-white d-flex align-items-center" href="#">
+            <img src="./images/logo@2x.png" class="me-3" alt="app logo">
+            <div>
+                <h1 class="fs-6 m-0">Weather</h1>
+                <small class="m-0">tagline goes here</small>
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link rounded-pill px-3 py-1 mx-1 text-white active" aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link rounded-pill px-3 py-1 mx-1 text-white" href="#">News</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link rounded-pill px-3 py-1 mx-1 text-white" href="#">Live Cameras</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link rounded-pill px-3 py-1 mx-1 text-white" href="#">Photos</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link rounded-pill px-3 py-1 mx-1 text-white" href="#">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+    </nav>
+
+    <section class="main-section py-5">
+        <div class="container">
+            <div class="search-box mt-4 mb-5 position-relative">
+                <input type="text" class="search-bar " placeholder="Find your location ...">
+                <button class="btn search-btn btn-primary position-absolute rounded-pill top-50 translate-middle-y">Find</button>
+            </div>
+            <div class="forecast-container mt-4 d-flex flex-wrap rounded overflow-hidden">
+                    <div class="forecast today-forecast bg-custom-less-dark">
+                        <div class="forecast-header bg-custom-dark p-2 d-flex justify-content-between">
+                            <h6 class="today sub-color m-0 fw-normal p-1">Tuesday</h6>
+                            <h6 class="month sub-color m-0 fw-normal p-1">25June</h6>
+                        </div>
+                        <div class="forecast-content p-4">
+                            <h3 class="city sub-color fs-5 fw-light mb-4">Cairo</h3>
+                            <h4 class="today-temp text-white mb-4">36.3<sup>o</sup>C</h4>
+                            <div class="weather-state">
+                                <img src="./images/sunny.webp" class="condition-icon w-25" alt="weather condition photo">
+                                <h4 class="today-condition state main-color fs-6 fw-normal">Sunny</h4>
+                                <ul class="p-0 d-flex mt-4"> 
+                                    <li class="me-3 sub-color d-flex">
+                                        <div class="rain-icon me-1"></div>
+                                        <h6 class="humidity fw-normal">20%</h6>
+                                    </li>
+                                    <li class="me-3 sub-color d-flex">
+                                        <div class="wind-icon me-1"></div>
+                                        <h6 class="wind fw-normal">18 km/h</h6>
+                                    </li>
+                                    <li class="sub-color d-flex">
+                                        <div class="compass-icon me-1"></div>
+                                        <h6 class="compass fw-normal">East</h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forecast second-forecast bg-custom-dark text-center">
+                        <div class="forecast-header bg-custom-less-dark p-2">
+                            <h6  class="next-day sub-color m-0 fw-normal p-1">Tuesday</h6>
+                        </div>
+                        <div class="forecast-content pt-5 pb-5">
+                            <img src="./images/sunny.webp" class="weather-icon mb-4" alt="weather condition photo">
+                            <h4 class="next-max-temp text-white m-0 fs-4 fw-semibold">36.3<sup>o</sup>C</h4>
+                            <small class="next-min-temp d-block text-white fs-6 mb-4 sub-color">24<sup>o</sup></small>
+                            <h4 class="next-state main-color fs-6 fw-normal">Sunny</h4>
+                        </div>
+                    </div>
+
+                    <div class="forecast third-forecast bg-custom-less-dark rounded-end text-center">
+                        <div class="forecast-header bg-custom-less-dark p-2">
+                            <h6 class="next-day sub-color m-0 fw-normal p-1">Tuesday</h6>
+                        </div>
+                        <div class="forecast-content pt-5 pb-5">
+                            <img src="./images/sunny.webp" class="weather-icon mb-4" alt="weather condition photo">
+                            <h4 class="next-max-temp  text-white m-0 fs-4 fw-semibold">36.3<sup>o</sup>C</h4>
+                            <small class="next-min-temp d-block text-white fs-6 mb-4 sub-color">25.8<sup>o</sup></small>
+                            <h4 class="next-state main-color fs-6 fw-normal">Sunny</h4>
+                        </div>
+                    </div>
+            </div>    
+        </div>
+    </section>
+
+    <footer class="py-5 bg-custom-less-dark">
+        <div class="container">
+            <div class="our-media d-flex flex-wrap align-items-center justify-content-between">
+                <div class="subscribe position-relative">
+                    <input type="text" class="subscribe-bar fs-6" placeholder="Enter your email to subscribe...">
+                    <button class="btn subscribe-btn btn-primary position-absolute rounded-pill top-50 translate-middle-y">Subscrib</button>
+                </div>
+                <div class="social-media">
+                    <ul class="d-flex align-items-center justify-content-center gap-2 mt-4 mt-lg-0">
+                        <li>
+                            <a href="#0" class=" d-block bg-custom-dark rounded-circle d-flex justify-content-center align-items-center"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0" class=" d-block bg-custom-dark rounded-circle d-flex justify-content-center align-items-center"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0" class=" d-block bg-custom-dark rounded-circle d-flex justify-content-center align-items-center"><i class="fa-brands fa-google-plus-g"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0" class=" d-block bg-custom-dark rounded-circle d-flex justify-content-center align-items-center"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright sub-color mt-4 text-center text-lg-start">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
