@@ -15,6 +15,7 @@ const nextDay = document.querySelectorAll('.next-day');
 const nextIcon = document.querySelectorAll('.weather-icon');
 const nextMaxTemp = document.querySelectorAll('.next-max-temp');
 const nextMinTemp = document.querySelectorAll('.next-min-temp');
+const nextstate = document.querySelectorAll('.next-state');
 
 // console.log(firstDay)
 // console.log(nextIcon)
@@ -54,6 +55,7 @@ function displayNextDayData(data) {
         nextIcon[i].setAttribute('src',  myData[i+1].day.condition.icon)
         nextMaxTemp[i].innerHTML = myData[i+1].day.maxtemp_c + '&deg;C'
         nextMinTemp[i].innerHTML = myData[i+1].day.mintemp_c + '&deg;C'
+        nextstate[i].innerHTML = myData[i+1].day.condition.text
     }
 }
 
