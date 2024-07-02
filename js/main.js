@@ -59,22 +59,22 @@ function displayNextDayData(data) {
     }
 }
 
-async function fetchLocation() {
-    const fetchedData = await fetch("https://ipinfo.io/json?token=4f233fa1b42f6e");
-    const response = await fetchedData.json();
-    return response.city;
-}
+// async function fetchLocation() {
+//     const fetchedData = await fetch("https://ipinfo.io/json?token=4f233fa1b42f6e");
+//     const response = await fetchedData.json();
+//     return response.city;
+// }
 
-async function getCurrentLocation() {
-    const mycity = await fetchLocation();
-    return mycity;
-}
+// async function getCurrentLocation() {
+//     const mycity = await fetchLocation();
+//     return mycity;
+// }
 
 // launching
-async function launchApp(city) {
-    if (!city) {
-        city = await getCurrentLocation();
-    }
+async function launchApp(city = 'cairo') {
+    // if (!city) {
+    //     city = await getCurrentLocation();
+    // }
 
     let myData = await getWeatherData(city);
     if (!myData.error) {
