@@ -17,18 +17,11 @@ const nextMaxTemp = document.querySelectorAll('.next-max-temp');
 const nextMinTemp = document.querySelectorAll('.next-min-temp');
 const nextstate = document.querySelectorAll('.next-state');
 
-// console.log(firstDay)
-// console.log(nextIcon)
-// console.log(nextMaxTemp)
-// console.log(nextMinTemp);
-
-
 async function getWeatherData(city) {
     let myRespose = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=9c172aa3b27242f599e140629242806&q=${city}&days=3`)
     let weatherData = await myRespose.json();
     return weatherData;
 } 
-
 
 // displayTodayData
 function displayTodayData(myData) {
@@ -45,7 +38,6 @@ function displayTodayData(myData) {
     compass.innerHTML = myData.current.wind_dir[0]
 }
 
-
 // displayNextDayData
 function displayNextDayData(data) {
     const myData =  data.forecast.forecastday
@@ -59,34 +51,19 @@ function displayNextDayData(data) {
     }
 }
 
-// async function fetchLocation() {
-//     const fetchedData = await fetch("https://ipinfo.io/json?token=4f233fa1b42f6e");
-//     const response = await fetchedData.json();
-//     return response.city;
-// }
-
-// async function getCurrentLocation() {
-//     const mycity = await fetchLocation();
-//     return mycity;
-// }
 
 // launching
 async function launchApp(city = 'cairo') {
-    // if (!city) {
-    //     city = await getCurrentLocation();
-    // }
-
     let myData = await getWeatherData(city);
     if (!myData.error) {
         displayTodayData(myData);
         displayNextDayData(myData);
     } else {
-        console.error("Error fetching weather data:", myData.error);
+        console.error(myData.error.message);
     }
 }
 
 launchApp()
-
 
 searchInput.addEventListener('input', function () {
         launchApp(searchInput.value)
